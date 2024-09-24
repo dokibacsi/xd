@@ -1,0 +1,57 @@
+/* Alap select box stílus */
+#personlist {
+    appearance: none;
+    width: 100%;
+    max-width: 300px; /* Max szélesség beállítása */
+    padding: 12px 16px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  #personlist:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+  }
+  
+  #personlist:hover {
+    border-color: #bbb;
+  }
+  
+  #personlist option {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+
+  #personlist option::selection{
+    background-color: #3498db;
+  }
+  
+  /* Stílus a select box nyílához */
+  #personlist::-ms-expand {
+    display: none;
+  }
+  
+  .custom-select-wrapper {
+    position: relative;
+  }
+  
+  .custom-select-wrapper::after {
+    content: '\25BC'; /* Lefelé mutató nyíl */
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 14px;
+    color: #333;
+  }
+  
